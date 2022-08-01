@@ -1,32 +1,30 @@
 /*
-  Free to use CSS template by Katie (#106445).
-  Cave image replacement code by Bobtail (#79288).
-  This code may be altered, edited, or re-uploaded. 
+  CSS template by Hara (#325063).
 */
 
 
-/* FONT (From Google Fonts)
+/* FONT (From Google Fonts) */
 
-@import url('https://fonts.googleapis.com/css2?family=Alegreya&family=Lora&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 
-BACKGROUND */
+/* BACKGROUND */
 
 body {
-	background: url('https://pixabay.com/get/g3537efbf2cd9fb8767d5e7b540826b01040678dd77a69d758278c5fea8ff316c928f58fcaceb3ddeb1fa74afaca1494d890825a301e6ed8e5555353c6222763d3522ad0e9dadb0548715d47c412123f7_1920.jpg');
+	background: url('https://static.lioden.com/images/nightBG.jpg');
 	background-repeat: repeat;
     background-attachment: fixed;
     background-position: center; 
 	background-size: auto;
-	font-family: 'Lora', serif;
-	color: #6D717C;
+	font-family: "OpenSans", Helvetica, Tahoma, Arial, sans-serif;
+	color: #00020F;
 }
 
 
 /* FEED ALL, PLAY ALL */
 
 .feature {
-	background: #1D212A !important;
-	color: #6D717C !important;
+	background: #EDBA74 !important;
+	color: #E7EAE7 !important;
 	border: none !important;
 	border-radius: 5px !important;
 }
@@ -35,30 +33,30 @@ body {
 /* TOPBAR ("Welcome back, ___"), NAVBAR (Den/Crossroads/Etc.) */
 
 .topbar {
-	background: #1D212A;
+	background: #45595A;
 	border: none;
 	border-top: none;
-	color: #6D717C;
+	color: #F2F3F3;
 	border-radius: 5px;
-	font-family: 'Lora', serif;
+	font-family: "OpenSans", Helvetica, Tahoma, Arial, sans-serif;
 }
 
 .navbar {
-	background: #1D212A;
+	background: #9FAEB5;
 	border-bottom: none;
-	font-family: 'Lora', serif;
-	color: #6D717C;
+	font-family: "OpenSans", Helvetica, Tahoma, Arial, sans-serif;
+	color: #274951;
 	border-radius: 5px;
 }
 
 .navbar li a {
-	color: #6D717C !important;
+	color: #274951 !important;
 }
 
 /* NAVBAR HOVER COLOR */
 
 .navbar li a:hover {
-	background: rgba(0, 0, 0, 0.2) !important;
+	background: #00020F !important;
 }
 
 
@@ -66,7 +64,7 @@ body {
 
 /* RIGHT SIDE */
 .container.main {
-	background: rgba(0, 0, 0, 0.4);
+	background: #00020F;
 	border: none;
 	box-shadow: none;
 	border-radius: 5px;
@@ -365,11 +363,11 @@ a:hover {
 	transition: 1s /* HOW FAST HOVER BOX EXPANDS TO FULL SIZE */
 }
 
-/* HOVER BOX (SIZE WHEN HOVERING OVER) */
+/* HOVER BOX (SIZE WHEN HOVERING OVER) 
 .Box2:hover {
 	overflow-y: auto;
 }
-
+*/
 
 /* SCROLL BAR */
 
@@ -420,10 +418,10 @@ table#player img {
 }
 
 
-/* LIODEN LOGO REPLACER
+/* LIODEN LOGO REPLACER */
 
 div.container.main>div:nth-child(1)>nav>div.navbar-header>a>img {
-	content: url('https://i.imgur.com/uBpiVUY.png');
+	content: url('https://static.lioden.com/img/layout/logo-full-2.png');
 }
 
 

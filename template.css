@@ -26,13 +26,15 @@
 	--pigmentation_box_hover:#FFFF00FF;
 	--pigmentation_button: #5A00C2FF;
 	--pigmentation_button_hover: #00FF00FF;
+	--pigmentation_alert_text: #A6FFF0FF;
+	--pigmentation_alert_box: #FFFF00FF;
     --pigmentation_1: #FF0000FF;
 	--pigmentation_2: #00FF00FF;
     --pigmentation_3: #0000FFFF;
 	--pigmentation_4: #FF00FFFF;
 	--pigmentation_5: #00FFFFFF;
 	--pigmentation_6: #FFFF00FF;
-	--pigmentation_7: #df5dff;
+	--pigmentation_7: #DF5DFFFF;
 	--pigmentation_8: #5A00C2FF;
 	--pigmentation_9: #A6FFF0FF;
 	--pigmentation_0: #FFFFFFFF;
@@ -130,15 +132,15 @@ body {
 /* ALERTS (ie. "Your lionesses have returned from hunting!") */
 
 .alert {
-	background: #32cfffd2;
+	background: var(--pigmentation_box_body);
 	border: none;
-	color: var(--pigmentation_sall_text);
+	color: var(--pigmentation_alert_text);
 }
 
 .alert-warning,
 .alert-danger {
-	background: #1D212A;
-	color: var(--pigmentation_big_text);
+	background: var(--pigmentation_alert_box);
+	color: var(--pigmentation_alert_text);
 }
 
 
@@ -200,7 +202,7 @@ div.left {
 }
 
 .s-chat-message:nth-child(odd) {
-	background: #40434a !important;
+	background: var(--pigmentation_4) !important;
 	border: 3px !important;
 	border-bottom: #101217 1px solid !important;
 	border-bottom-color: #101217 !important;
@@ -208,15 +210,15 @@ div.left {
 
 /* PINNED MESSAGE */
 .s-chat-message__pinned {
-	background: #1D212A !important;
-	color: #6D717C !important;
+	background: var(--pigmentation_5) !important;
+	color: var(--pigmentation_6) !important;
 	border: 3px !important;
 	border-bottom: #101217 1px solid !important;
 	border-bottom-color: #101217 !important;
 }
 
 .s-chat-message_timestamp {
-	color: #6D717C !important;
+	color: var(--pigmentation_7) !important;
 }
 
 div#chatMessageContainer {
@@ -307,9 +309,8 @@ input[type="submit"],
 input[type="reset"] {
 	background: var(--pigmentation_button) !important;
 	color: var(--pigmentation_sall_text) !important;
-	border: 1px solid #000000FF;
-	/*text-shadow: 1px 1px 0px #000000FF;*/
-	font-weight: bold;
+	border: 1px solid #1D212AFF;
+	text-shadow: 1px 1px 0px #1D212AFF;
 	font-size: 13px;
 	padding: 3px 12px;
 	margin: 2px 0;
@@ -323,8 +324,8 @@ input[type="submit"]:hover,
 input[type="reset"]:hover {
 	background: var(--pigmentation_button_hover) !important;
 	color: var(--pigmentation_big_text) !important;
-	border: 1px solid #000000FF;
-	text-shadow: 1px 1px 0px #000000FF;
+	border: 1px solid #1D212AFF;
+	text-shadow: 1px 1px 0px #1D212AFF;
 	font-weight: bold;
 	font-size: 13px;
 	padding: 3px 12px;

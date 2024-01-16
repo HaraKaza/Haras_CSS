@@ -25,6 +25,7 @@
 	--pigmentation_link_hover: #FF00FFFF;
 	--pigmentation_box_hover:#FFFF00FF;
 	--pigmentation_button: #5A00C2FF;
+	--pigmentation_button_hover: #00FF00FF;
     --pigmentation_1: #FF0000FF;
 	--pigmentation_2: #00FF00FF;
     --pigmentation_3: #0000FFFF;
@@ -297,6 +298,22 @@ textarea {
 	text-shadow: none !important;
 }
 
+.select-control,
+button.button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+background: var(--pigmentation_button);
+}
+
+.select-control:hover,
+button.button:hover,
+input[type="button"]:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+background: var(--pigmentation_button_hover);
+}
+
 
 /* Color behind "Level, Stats, Branch, Territory" etc. */
 
@@ -535,7 +552,3 @@ a[href$="lionoverview.php?id=USERID"]>div.cave-grid>img {
     display: inline-block;
 }
 */
-
-.select-control, button.button, input[type="button"], input[type="submit"], input[type="reset"] {
-    background: var(--pigmentation_button);
-}

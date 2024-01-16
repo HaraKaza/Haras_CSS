@@ -286,6 +286,8 @@ th {
 
 /* Affects the color behind your territory description, player name, etc. */
 
+
+
 input,
 select,
 textarea {
@@ -303,7 +305,7 @@ button.button,
 input[type="button"],
 input[type="submit"],
 input[type="reset"] {
-background: var(--pigmentation_button);
+background: var(--pigmentation_button) !important;
 }
 
 .select-control:hover,
@@ -311,7 +313,7 @@ button.button:hover,
 input[type="button"]:hover,
 input[type="submit"]:hover,
 input[type="reset"]:hover {
-background: var(--pigmentation_button_hover);
+background: var(--pigmentation_button_hover) !important;
 }
 
 

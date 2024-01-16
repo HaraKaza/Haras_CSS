@@ -6,26 +6,57 @@
 
 /* FONT (From Google Fonts https://fonts.google.com/) */
 
-@import url('FONT LINK HERE');
+
+/* FONT (From Google Fonts) */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap'); /* font-family: "OpenSans", Helvetica, Tahoma, Arial, sans-serif; */
+
+
+/* CSS variables For Colors*/
+:root {
+	--pigmentation_big_text: #852A2AFF;
+	--pigmentation_sall_text: #FF0000FF;
+	--pigmentation_signature: #4B0055FF;
+	--pigmentation_side_text: #00FFFFFF;
+	--pigmentation_progression: #0000FFFF;
+	--pigmentation_goal: #FFFFFFFF;
+	--pigmentation_box_background: #e3842f80;
+	--pigmentation_box_body: #e3842f;
+	--pigmentation_link_hover: #FF00FFFF;
+	--pigmentation_box_hover:#FFFF00FF;
+	--pigmentation_button: #5A00C2FF;
+    --pigmentation_1: #FF0000FF;
+	--pigmentation_2: #00FF00FF;
+    --pigmentation_3: #0000FFFF;
+	--pigmentation_4: #FF00FFFF;
+	--pigmentation_5: #00FFFFFF;
+	--pigmentation_6: #FFFF00FF;
+	--pigmentation_7: #df5dff;
+	--pigmentation_8: #5A00C2FF;
+	--pigmentation_9: #A6FFF0FF;
+	--pigmentation_0: #FFFFFFFF;
+	--family_font_1: "OpenSans", Helvetica, Tahoma, Arial, sans-serif;
+	--family_font_2: "OpenSans", Helvetica, Tahoma, Arial, sans-serif;
+  }
 
 /* BACKGROUND */
 
 body {
-	background: url('BACKGROUND URL HERE');
+	background: url('https://github.com/HaraKaza/Lioden_CSS/blob/main/technology-background.png?raw=true');
 	background-repeat: repeat;
     background-attachment: fixed;
     background-position: center; 
-	background-size: auto;
-	font-family: FONT CSS HERE;
-	color: #000000;
+	background-size: cover;
+	font-family: var(--family_font_1);
+	color: var(--pigmentation_big_text);
 }
 
 
 /* FEED ALL, PLAY ALL */
 
 .feature {
-	background: #000000 !important;
-	color: #000000 !important;
+	background: var(--pigmentation_box_body) !important;
+	color: var(--pigmentation_3) !important;
 	border: none !important;
 	border-radius: 5px !important;
 }
@@ -34,30 +65,30 @@ body {
 /* TOPBAR ("Welcome back, ___"), NAVBAR (Den/Crossroads/Etc.) */
 
 .topbar {
-	background: #000000;
+	background: var(--pigmentation_box_body);
 	border: none;
 	border-top: none;
-	color: #000000;
+	color: var(--pigmentation_sall_text);
 	border-radius: 5px;
-	font-family: FONT CSS HERE;
+	font-family: var(--family_font_1);
 }
 
 .navbar {
-	background: #000000;
+	background: var(--pigmentation_box_body);
 	border-bottom: none;
-	font-family: FONT CSS HERE;
-	color: #000000;
+	font-family: var(--family_font_2);
+	color: var(--pigmentation_sall_text);
 	border-radius: 5px;
 }
 
 .navbar li a {
-	color: #000000 !important;
+	color: var(--pigmentation_big_text) !important;
 }
 
 /* NAVBAR HOVER COLOR */
 
 .navbar li a:hover {
-	background: #000000 !important;
+	background: var(--pigmentation_box_hover) !important;
 }
 
 
@@ -65,7 +96,7 @@ body {
 
 /* RIGHT SIDE */
 .container.main {
-	background: #000000;
+	background: var(--pigmentation_box_background);
 	border: none;
 	box-shadow: none;
 	border-radius: 5px;
@@ -80,26 +111,33 @@ body {
 /* BREADCRUMB (Home / Den) */
 
 .breadcrumb {
-	background: #000000;
+	background: var(--pigmentation_box_body);
 }
 
 .breadcrumb .active {
-	color: #000000;
+	color: #6D717C;
 }
+
+.breadcrumb::after {
+    content: "CSS by Hara Kaza [#313293]";
+    color: var(--pigmentation_signature);
+    position: absolute;
+    right: 13%;
+    z-index: 100;}
 
 
 /* ALERTS (ie. "Your lionesses have returned from hunting!") */
 
 .alert {
-	background: #000000;
+	background: #32cfffd2;
 	border: none;
-	color: #000000;
+	color: var(--pigmentation_sall_text);
 }
 
 .alert-warning,
 .alert-danger {
-	background: #000000;
-	color: #000000;
+	background: #1D212A;
+	color: var(--pigmentation_big_text);
 }
 
 
@@ -107,59 +145,77 @@ body {
 
 .feature,
 div.left {
-	background: #000000;
+	background: var(--pigmentation_box_body);
 	border: none;
 }
 
 
 /* ENERGY BARS, ACHIEVEMENTS, & BOOKMARKS */
 
+.sidebar h3 {
+	color: var(--pigmentation_big_text) !important;
+	font-size: 20px;
+}
+
+/* SIDEBAR BOXES */
+
 .panel {
-	background: #000000 !important;
+	background: var(--pigmentation_box_body) !important;
 	box-shadow: none !important;
 	border: none !important;
-	color: #000000 !important;
+	color: var(--pigmentation_side_text) !important;
 }
 
 /* ENERGY BAR BACKGROUND */
 .progress {
-	background: #000000;
-	color: #000000 !important;
+	background: var(--pigmentation_goal);
+	color: var(--pigmentation_side_text) !important;
 }
 
 /* ENERGY BAR TEXT */
 .progress div {
-	color: #000000 !important;
+	color: var(--pigmentation_sall_text) !important;
 }
 
 /* ENERGY BAR COLOR */
 .progress-bar {
-	background: #000000;
-	color: #000000 !important;
+	background: var(--pigmentation_progression);
+	color: var(--pigmentation_side_text) !important;
 }
 
 
 /* CHAT */
+#chatMessagePinned.s-chat-message__pinned {
+   	border: 1px !important;
+	border-bottom: #101217 3px solid !important;
+	border-bottom-color: #101217 !important;
+}
 
 .s-chat-message:nth-child(even) {
-	background: #000000 !important;
-	border: none !important;
+	background: #1D212A !important;
+	border: 3px !important;
+	border-bottom: #101217 1px solid !important;
+	border-bottom-color: #101217 !important;
 }
 
 .s-chat-message:nth-child(odd) {
-	background: #000000 !important;
-	border: none !important;
+	background: #40434a !important;
+	border: 3px !important;
+	border-bottom: #101217 1px solid !important;
+	border-bottom-color: #101217 !important;
 }
 
 /* PINNED MESSAGE */
 .s-chat-message__pinned {
-	background: #000000 !important;
-	color: #000000 !important;
-	border: none !important;
+	background: #1D212A !important;
+	color: #6D717C !important;
+	border: 3px !important;
+	border-bottom: #101217 1px solid !important;
+	border-bottom-color: #101217 !important;
 }
 
 .s-chat-message_timestamp {
-	color: #000000 !important;
+	color: #6D717C !important;
 }
 
 div#chatMessageContainer {
@@ -169,14 +225,14 @@ div#chatMessageContainer {
 /* CURRENT CHANNEL TAB (MAIN, SALES, ETC.) */
 button#label_currentChannel {
 	border: none !important;
-	background: #000000 !important;
+	background: var(--pigmentation_button) !important;
 }
 
 
 /* BIGGEST HEADER ("___"'s DEN) */
 
 h1 {
-	color: #000000;
+	color: var(--pigmentation_small_text);
 	font-size: 72px;
 	text-align: center;
 }
@@ -185,7 +241,7 @@ h1 {
 /* MEDIUM HEADER */
 
 h2 {
-	color: #000000;
+	color: var(--pigmentation_small_text);
 	font-size: 24px;
 	text-align: center;
 }
@@ -194,7 +250,7 @@ h2 {
 /* SMALL HEADER */
 
 h3 {
-	color: #000000 !important;
+	color: var(--pigmentation_small_text) !important;
 	font-size: 14px !important
 }
 
@@ -204,7 +260,7 @@ h3 {
 
 /* PANEL BACKGROUND COLOR */
 .table {
-	background: #000000;
+	background: var(--pigmentation_box_body);
 	border: none !important;
 	border-collapse: separate;
 	border-radius: 5px;
@@ -215,8 +271,8 @@ h3 {
 .top,
 .bottom,
 th {
-	background: #000000 !important;
-	color: #000000 !important;
+	background: var(--pigmentation_box_body) !important;
+	color: var(--pigmentation_small_text) !important;
 	border-radius: 5px;
 }
 
@@ -224,7 +280,7 @@ th {
 /* Block of color where "Territory Description, Player Name, Avatar URL" etc. are */
 
 .table .left {
-	background: #000000
+	background: var(--pigmentation_box_body)
 }
 
 /* Affects the color behind your territory description, player name, etc. */
@@ -232,7 +288,7 @@ th {
 input,
 select,
 textarea {
-	background: #000000 !important;
+	background: var(--pigmentation_button) !important;
 	border: none !important;
 	border-color: black;
 	border-radius: 5px;
@@ -245,14 +301,14 @@ textarea {
 /* Color behind "Level, Stats, Branch, Territory" etc. */
 
 .inner-table .left {
-	background: #000000 !important;
+	background: var(--pigmentation_box_body) !important;
 }
 
 
 /* Color behind the number of all of the things above */
 
 .inner-table .right {
-	background: #000000
+	background: var(--pigmentation_box_body)
 }
 
 /* IGNORE */
@@ -264,12 +320,12 @@ textarea {
 /* ACCOUNT OPTIONS PANELS  (Friend Requests Toggles, etc.) */
 
 .item-header {
-	background: #000000 !important;
-	color: #000000  !important;
+	background: var(--pigmentation_box_body) !important;
+	color: var(--pigmentation_small_text)  !important;
 }
 
 .item {
-	background: #000000 !important;
+	background: var(--pigmentation_box_body) !important;
 	border: none !important;
 }
 
@@ -277,11 +333,11 @@ textarea {
 /* BEETLE MOUND TOPBAR (Where it says Beetle Training Grounds, Beetle Battling, etc.) */
 
 .sub_menu {
-	background: #000000 !important;
+	background: var(--pigmentation_box_body) !important;
 }
 
 .sub_menu_item_selected {
-	background: #000000 !important;
+	background: var(--pigmentation_box_body) !important;
 }
 
 
@@ -289,7 +345,7 @@ textarea {
 
 .cave-grid,
 .mound-grid {
-	background: #000000;
+	background: var(--pigmentation_box_body);
 	border: none !important;
 }
 
@@ -298,11 +354,13 @@ textarea {
 
 a:link,
 a:visited {
-	color: #000000 !important;
+	color: var(--pigmentation_small_text) !important;
+	transition: 0.5s !important;
+	text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
 }
 
 a:hover {
-	color: #000000 !important;
+	color: var(--pigmentation_link_hover) !important;
 }
 
 
@@ -318,8 +376,8 @@ a:hover {
 
 .Box1 {
 	float: left;
-	background: #000000;
-	color: #000000 ;
+	background: rgba(0, 0, 0, 0.6);
+	color: var(--pigmentation_small_text) ;
 	padding: 15px;
 	border: none;
 	border-radius: 5px;
@@ -328,7 +386,7 @@ a:hover {
 	width: 350px;
 	overflow: auto;
 	margin-bottom: 25px;
-	transition: 1s /* HOW FAST HOVER BOX EXPANDS TO FULL SIZE */
+	transition: 1s /* HOW FAST HOVER BOX EXPANDS TO FULL SIZE */7
 }
 
 /* HOVER BOX (SIZE WHEN HOVERING OVER) */
@@ -338,8 +396,8 @@ a:hover {
 
 .Box2 {
 	float: left;
-	background: #000000;
-	color: #000000 ;
+	background: rgba(0, 0, 0, 0.6);
+	color: #6D717C ;
 	padding: 15px;
 	border: none;
 	border-radius: 5px;
@@ -351,11 +409,11 @@ a:hover {
 	transition: 1s /* HOW FAST HOVER BOX EXPANDS TO FULL SIZE */
 }
 
-/* HOVER BOX (SIZE WHEN HOVERING OVER) */
+/* HOVER BOX (SIZE WHEN HOVERING OVER) 
 .Box2:hover {
 	overflow-y: auto;
 }
-
+*/
 
 /* SCROLL BAR */
 
@@ -409,44 +467,155 @@ table#player img {
 /* LIODEN LOGO REPLACER */
 
 div.container.main>div:nth-child(1)>nav>div.navbar-header>a>img {
-	content: url('IMAGE URL HERE');
+	content: url('https://github.com/HaraKaza/Lioden_CSS/blob/main/logo-full-Custom.png?raw=true');
 }
 
 
-/* PREGNANT LIONESSES */
+/* PREGNANT LIONESSES 
 
 div.cave-grid>img {
-	content: url('https://puu.sh/EJV1D/dfefa228df.png')!important;
+	content: url('https://static.lioden.com/images/dynamic/backgrounds/PerseidStormBG.png')!important;
+	height: 70px;
 }
 
 
-/* CAVES (Copy paste to add more) */
+/* CAVES (Copy paste to add more) 
 
 a[href$="CAVE ID HERE"]>div.cave-grid>img {
 	content: url('IMAGE URL HERE')!important;
 }
 
 
-/* UNSORTED */
+/* UNSORTED 
 
 a[href$="unsorted.php?id=USERID"]>div.cave-grid>img {
 	content: url('IMAGE URL HERE')!important;
 }
 
 
-/* PRIDE OVERVIEW */
+/* PRIDE OVERVIEW
 
 a[href$="lionoverview.php?id=USERID"]>div.cave-grid>img {
 	content: url('IMAGE URL HERE')!important;
 }
 
 
-/* MOUNDS */
+/* MOUNDS 
 
 .mound-grid img {
-	background: url('IMAGE URL HERE');
+	background: url('https://static.lioden.com/images/dynamic/backgrounds/PerseidStormBG.png');
 	width: 0;
 	height: 0;
 	padding-top: 80px;
 	padding-right: 130px;
+}
+.credit {
+	background: #1f4529;
+	color: white;
+	padding: 5px;
+	border: 1px solid black;
+	position: fixed;
+	text-align: center;
+	border-radius: 10px;
+	left: 0px;
+	bottom: 0px;
+	width: 180px;
+	height: 45px;
+	overflow: auto;
+}
+.member-online {
+    background: #6D717C;
+    border-radius: 50%;
+    height: 10px;
+    width: 10px;
+    display: inline-block;
+}
+*/
+
+
+
+
+
+
+
+.dissolveAbout {
+    background-image:url('https://cdn.discordapp.com/attachments/696533439444156556/696592064602963998/iOS-7-dark-mod-iphone-wallpaper-ar72014.jpg');
+    width:797.5px;
+    height:150px;
+    overflow:hidden;
+    transition:0.5s ease-in-out;
+    background-color:#6D717C;
+    border:5px solid #16181c;
+	border-style: solid;
+	border-radius: 10px;
+}
+
+.dissolveAboutTop {
+    width:797.5px;
+    position:absolute;
+    z-index:99;
+    font-family: var(--family_font_2);
+    font-size:45px;
+    line-height:140px;
+    margin:auto;
+    margin-left:-10px;
+    text-transform:uppercase;
+    transition:0.5s ease-in-out;
+    color:#6D717C;
+}
+
+.dissolveAboutBottom {
+    margin:0;
+    position:relative;
+    width:775.5px;
+    height:145px;
+    margin-top:500px;
+    z-index:100;
+    transition:0.5s ease-in-out;
+    padding:5px;
+    background-color:rgba(109, 113, 124, 0.5);
+    text-align:justify;
+    color:#000000;
+    overflow-y: auto;
+}
+
+.dissolveAbout:hover .dissolveAboutTop {
+    font-size:0px;
+    transition:0.9s ease-in-out;
+}
+
+.dissolveAbout:hover .dissolveAboutBottom {
+    margin-top:0px;
+    top:0;
+    transition:0.9s ease-in-out;
+}
+.credit {
+	background: #1D212A;
+	color: #6D717C;
+	padding: 5px;
+	border: 1px solid black;
+	position: fixed;
+	text-align: center;
+	border-radius: 10px;
+	left: 0px;
+	bottom: 0px;
+	width: 185px;
+	height: 50px;
+	overflow: auto;
+}
+.Box1 {
+	float: left;
+	background: #2A303A;
+	color: #6D717C;
+	padding: 15px;
+	border: none;
+	border-radius: 5px;
+	margin: 5px;
+	margin-bottom: 0px;
+	height: 150px;
+	width: 250px;
+	overflow: hidden;
+}
+.Box1:hover {
+	overflow-y: auto;
 }

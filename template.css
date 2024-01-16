@@ -17,11 +17,11 @@
 	--pigmentation_big_text: #852A2AFF;
 	--pigmentation_sall_text: #FF0000FF;
 	--pigmentation_signature: #78FF56FF;
-	--pigmentation_side_text: #00FFFFFF;
+	--pigmentation_side_text: #00FF00FF;
 	--pigmentation_progression: #0000FFFF;
 	--pigmentation_goal: #FFFFFFFF;
 	--pigmentation_box_background: #e3842f80;
-	--pigmentation_box_body: #E3842FFF;
+	--pigmentation_box_body: #CC00FFFF;
 	--pigmentation_link_hover: #FF00FFFF;
 	--pigmentation_box_hover:#FFFF00FF;
 	--pigmentation_button: #5A00C2FF;
@@ -305,8 +305,15 @@ button.button,
 input[type="button"],
 input[type="submit"],
 input[type="reset"] {
-background: var(--pigmentation_button) !important;
-color: var(--pigmentation_sall_text) !important;
+	background: var(--pigmentation_button) !important;
+	color: var(--pigmentation_sall_text) !important;
+	border: 1px solid #000000FF;
+	/*text-shadow: 1px 1px 0px #000000FF;*/
+	font-weight: bold;
+	font-size: 13px;
+	padding: 3px 12px;
+	margin: 2px 0;
+	border-radius: 3px;
 }
 
 .select-control:hover,
@@ -314,9 +321,17 @@ button.button:hover,
 input[type="button"]:hover,
 input[type="submit"]:hover,
 input[type="reset"]:hover {
-background: var(--pigmentation_button_hover) !important;
-color: var(--pigmentation_big_text) !important;
+	background: var(--pigmentation_button_hover) !important;
+	color: var(--pigmentation_big_text) !important;
+	border: 1px solid #000000FF;
+	text-shadow: 1px 1px 0px #000000FF;
+	font-weight: bold;
+	font-size: 13px;
+	padding: 3px 12px;
+	margin: 2px 0;
+	border-radius: 3px;
 }
+
 
 
 /* Color behind "Level, Stats, Branch, Territory" etc. */

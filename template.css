@@ -364,6 +364,10 @@ a:hover {
 }
 
 
+.text-muted {
+    color: var(--pigmentation_sall_text);
+}
+
 /* BOXES (Copy paste to add more or less) */
 
 .boxcontainer {

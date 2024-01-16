@@ -20,7 +20,7 @@
 	--pigmentation_side_text: #00FF00FF;
 	--pigmentation_progression: #0000FFFF;
 	--pigmentation_goal: #FFFFFFFF;
-	--pigmentation_box_background: #e3842f80;
+	--pigmentation_box_background: #E3842F80;
 	--pigmentation_box_body: #CC00FFFF;
 	--pigmentation_link_hover: #FF00FFFF;
 	--pigmentation_box_hover:#FFFF00FF;
@@ -28,6 +28,9 @@
 	--pigmentation_button_hover: #00FF00FF;
 	--pigmentation_alert_text: #A6FFF0FF;
 	--pigmentation_alert_box: #FFFF00FF;
+	--pigmentation_border: #1D212AFF;
+	--pigmentation_scrollbar_track: #BBFF00FF;
+	--pigmentation_scrollbar_thumb: #00FFDDFF;
     --pigmentation_1: #FF0000FF;
 	--pigmentation_2: #00FF00FF;
     --pigmentation_3: #0000FFFF;
@@ -38,6 +41,7 @@
 	--pigmentation_8: #5A00C2FF;
 	--pigmentation_9: #A6FFF0FF;
 	--pigmentation_0: #FFFFFFFF;
+	--pigmentation_opacity: 1.0;
 	--family_font_1: "OpenSans", Helvetica, Tahoma, Arial, sans-serif;
 	--family_font_2: "OpenSans", Helvetica, Tahoma, Arial, sans-serif;
   }
@@ -190,22 +194,22 @@ div.left {
 /* CHAT */
 #chatMessagePinned.s-chat-message__pinned {
    	border: 1px !important;
-	border-bottom: #101217 3px solid !important;
-	border-bottom-color: #101217 !important;
+	border-bottom: var(--pigmentation_border) 3px solid !important;
+	border-bottom-color: var(--pigmentation_border) !important;
 }
 
 .s-chat-message:nth-child(even) {
-	background: #1D212A !important;
+	background: var(--pigmentation_9) !important;
 	border: 3px !important;
-	border-bottom: #101217 1px solid !important;
-	border-bottom-color: #101217 !important;
+	border-bottom: var(--pigmentation_border) 1px solid !important;
+	border-bottom-color: var(--pigmentation_border) !important;
 }
 
 .s-chat-message:nth-child(odd) {
 	background: var(--pigmentation_4) !important;
 	border: 3px !important;
-	border-bottom: #101217 1px solid !important;
-	border-bottom-color: #101217 !important;
+	border-bottom: var(--pigmentation_border) 1px solid !important;
+	border-bottom-color: var(--pigmentation_border) !important;
 }
 
 /* PINNED MESSAGE */
@@ -213,8 +217,8 @@ div.left {
 	background: var(--pigmentation_5) !important;
 	color: var(--pigmentation_6) !important;
 	border: 3px !important;
-	border-bottom: #101217 1px solid !important;
-	border-bottom-color: #101217 !important;
+	border-bottom: var(--pigmentation_border) 1px solid !important;
+	border-bottom-color: var(--pigmentation_border) !important;
 }
 
 .s-chat-message_timestamp {
@@ -295,7 +299,7 @@ select,
 textarea {
 	background: var(--pigmentation_button) !important;
 	border: none !important;
-	border-color: black;
+	border-color: var(--pigmentation_border);
 	border-radius: 5px;
 	box-shadow: none !important;
 	color: black !important;
@@ -309,8 +313,8 @@ input[type="submit"],
 input[type="reset"] {
 	background: var(--pigmentation_button) !important;
 	color: var(--pigmentation_sall_text) !important;
-	border: 1px solid #1D212AFF;
-	text-shadow: 1px 1px 0px #1D212AFF;
+	border: 1px solid var(--pigmentation_border);
+	text-shadow: 1px 1px 0px var(--pigmentation_border);
 	font-size: 13px;
 	padding: 3px 12px;
 	margin: 2px 0;
@@ -324,8 +328,8 @@ input[type="submit"]:hover,
 input[type="reset"]:hover {
 	background: var(--pigmentation_button_hover) !important;
 	color: var(--pigmentation_big_text) !important;
-	border: 1px solid #1D212AFF;
-	text-shadow: 1px 1px 0px #1D212AFF;
+	border: 1px solid var(--pigmentation_border);
+	text-shadow: 1px 1px 0px var(--pigmentation_border);
 	font-weight: bold;
 	font-size: 13px;
 	padding: 3px 12px;
@@ -467,14 +471,14 @@ a:hover {
 /* SCROLL BAR BACKGROUND */
 
 ::-webkit-scrollbar-track {
-	background: #000000;
+	background: var(--pigmentation_scrollbar_track);
 }
 
 
 /* SCROLL BAR "THUMB" */
 
 ::-webkit-scrollbar-thumb {
-	background: #000000;
+	background: var(--pigmentation_scrollbar_thumb);
 	border-radius: 4px;
 }
 
@@ -482,11 +486,11 @@ a:hover {
 /* LION AND USER AVATAR OPACITY */
 
 div#lion_image {
-	opacity: 0.6;
+	opacity: var(--pigmentation_opacity);
 }
 
 table#player img {
-	opacity: 0.6;
+	opacity: var(--pigmentation_opacity);
 }
 
 
@@ -541,7 +545,7 @@ a[href$="lionoverview.php?id=USERID"]>div.cave-grid>img {
 }
 
 
-/* MOUNDS 
+ MOUNDS
 
 .mound-grid img {
 	background: url('https://static.lioden.com/images/dynamic/backgrounds/PerseidStormBG.png');
@@ -554,7 +558,7 @@ a[href$="lionoverview.php?id=USERID"]>div.cave-grid>img {
 	background: #1f4529;
 	color: white;
 	padding: 5px;
-	border: 1px solid black;
+	border: 1px solid var(--pigmentation_border);
 	position: fixed;
 	text-align: center;
 	border-radius: 10px;

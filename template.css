@@ -306,6 +306,7 @@ input[type="button"],
 input[type="submit"],
 input[type="reset"] {
 background: var(--pigmentation_button) !important;
+color: var(--pigmentation_sall_text) !important;
 }
 
 .select-control:hover,
@@ -314,6 +315,7 @@ input[type="button"]:hover,
 input[type="submit"]:hover,
 input[type="reset"]:hover {
 background: var(--pigmentation_button_hover) !important;
+color: var(--pigmentation_big_text) !important;
 }
 
 

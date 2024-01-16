@@ -16,12 +16,12 @@
 :root {
 	--pigmentation_big_text: #852A2AFF;
 	--pigmentation_sall_text: #FF0000FF;
-	--pigmentation_signature: #4B0055FF;
+	--pigmentation_signature: #78FF56FF;
 	--pigmentation_side_text: #00FFFFFF;
 	--pigmentation_progression: #0000FFFF;
 	--pigmentation_goal: #FFFFFFFF;
 	--pigmentation_box_background: #e3842f80;
-	--pigmentation_box_body: #e3842f;
+	--pigmentation_box_body: #E3842FFF;
 	--pigmentation_link_hover: #FF00FFFF;
 	--pigmentation_box_hover:#FFFF00FF;
 	--pigmentation_button: #5A00C2FF;
@@ -536,90 +536,6 @@ a[href$="lionoverview.php?id=USERID"]>div.cave-grid>img {
 }
 */
 
-
-
-
-
-
-
-.dissolveAbout {
-    background-image:url('https://cdn.discordapp.com/attachments/696533439444156556/696592064602963998/iOS-7-dark-mod-iphone-wallpaper-ar72014.jpg');
-    width:797.5px;
-    height:150px;
-    overflow:hidden;
-    transition:0.5s ease-in-out;
-    background-color:#6D717C;
-    border:5px solid #16181c;
-	border-style: solid;
-	border-radius: 10px;
-}
-
-.dissolveAboutTop {
-    width:797.5px;
-    position:absolute;
-    z-index:99;
-    font-family: var(--family_font_2);
-    font-size:45px;
-    line-height:140px;
-    margin:auto;
-    margin-left:-10px;
-    text-transform:uppercase;
-    transition:0.5s ease-in-out;
-    color:#6D717C;
-}
-
-.dissolveAboutBottom {
-    margin:0;
-    position:relative;
-    width:775.5px;
-    height:145px;
-    margin-top:500px;
-    z-index:100;
-    transition:0.5s ease-in-out;
-    padding:5px;
-    background-color:rgba(109, 113, 124, 0.5);
-    text-align:justify;
-    color:#000000;
-    overflow-y: auto;
-}
-
-.dissolveAbout:hover .dissolveAboutTop {
-    font-size:0px;
-    transition:0.9s ease-in-out;
-}
-
-.dissolveAbout:hover .dissolveAboutBottom {
-    margin-top:0px;
-    top:0;
-    transition:0.9s ease-in-out;
-}
-.credit {
-	background: #1D212A;
-	color: #6D717C;
-	padding: 5px;
-	border: 1px solid black;
-	position: fixed;
-	text-align: center;
-	border-radius: 10px;
-	left: 0px;
-	bottom: 0px;
-	width: 185px;
-	height: 50px;
-	overflow: auto;
-}
-.Box1 {
-	float: left;
-	background: #2A303A;
-	color: #6D717C;
-	padding: 15px;
-	border: none;
-	border-radius: 5px;
-	margin: 5px;
-	margin-bottom: 0px;
-	height: 150px;
-	width: 250px;
-	overflow: hidden;
-}
-.Box1:hover {
-	overflow-y: auto;
+.select-control, button.button, input[type="button"], input[type="submit"], input[type="reset"] {
+    background: var(--pigmentation_button);
 }

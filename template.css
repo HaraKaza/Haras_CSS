@@ -6,11 +6,11 @@
 
 /* FONT (From Google Fonts https://fonts.google.com/) */
 
-
-/* FONT (From Google Fonts) */
-
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap'); /* font-family: "OpenSans", Helvetica, Tahoma, Arial, sans-serif; */
 
+/* CURSOR from https://www.cursors-4u.com */
+
+* {cursor: url(https://cur.cursors-4u.net/games/gam-14/gam1394.cur), auto !important;}
 
 /* CSS variables For Colors*/
 :root {
@@ -33,16 +33,7 @@
 	--pigmentation_scrollbar_thumb: #00FFDDFF;
 	--pigmentation_chatbox_even: #00FF00FF;
 	--pigmentation_chatbox_odd: #A6FFF0FF;
-    --pigmentation_1: #FF0000FF;
-	--pigmentation_2: #00FF00FF;
-    --pigmentation_3: #0000FFFF;
-	--pigmentation_4: #FF00FFFF;
-	--pigmentation_5: #00FFFFFF;
-	--pigmentation_6: #FFFF00FF;
-	--pigmentation_7: #DF5DFFFF;
-	--pigmentation_8: #5A00C2FF;
-	--pigmentation_9: #A6FFF0FF;
-	--pigmentation_0: #FFFFFFFF;
+	--pigmentation_shadow_text: #00000000;
 	--pigmentation_opacity: 1.0;
 	--family_font_1: "OpenSans", Helvetica, Tahoma, Arial, sans-serif;
 	--family_font_2: "OpenSans", Helvetica, Tahoma, Arial, sans-serif;
@@ -217,7 +208,7 @@ div.left {
 /* PINNED MESSAGE */
 .s-chat-message__pinned {
 	background: var(--pigmentation_chatbox_even) !important;
-	color: var(--pigmentation_6) !important;
+	color: var(--pigmentation_sall_text) !important;
 	border: 3px !important;
 	border-bottom: var(--pigmentation_border) 1px solid !important;
 	border-bottom-color: var(--pigmentation_border) !important;
@@ -340,7 +331,7 @@ input[type="reset"] {
 	background: var(--pigmentation_button) !important;
 	color: var(--pigmentation_sall_text) !important;
 	border: 1px solid var(--pigmentation_border);
-	text-shadow: 1px 1px 0px var(--pigmentation_border);
+	text-shadow: 1px 1px 0px var(--pigmentation_shadow_text);
 	font-size: 13px;
 	padding: 3px 12px;
 	margin: 2px 0;
@@ -355,7 +346,7 @@ input[type="reset"]:hover {
 	background: var(--pigmentation_button_hover) !important;
 	color: var(--pigmentation_big_text) !important;
 	border: 1px solid var(--pigmentation_border);
-	text-shadow: 1px 1px 0px var(--pigmentation_border);
+	text-shadow: 1px 1px 0px var(--pigmentation_shadow_text);
 	font-weight: bold;
 	font-size: 13px;
 	padding: 3px 12px;
@@ -423,7 +414,7 @@ a:link,
 a:visited {
 	color: var(--pigmentation_small_text) !important;
 	transition: 0.5s !important;
-	text-shadow: 0px 0px 8px var(--pigmentation_border);
+	text-shadow: 0px 0px 8px var(--pigmentation_shadow_text);
 }
 
 a:hover {

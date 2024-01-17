@@ -1,30 +1,61 @@
 /*
-  CSS template by Hara (#325063).
+  CSS by Hara (#325063).
 */
 
+/* FONT (From Google Fonts https://fonts.google.com/) */
 
-/* FONT (From Google Fonts) */
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap'); /* font-family: 'Marcellus', serif; */
+@import url('https://fonts.googleapis.com/css2?family=Fondamento&display=swap'); /* font-family: 'Fondamento', cursive; */
 
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+/* CURSOR from https://www.cursors-4u.com */
+
+* {cursor: url(https://ani.cursors-4u.net/cursors/cur-13/cur1163.ani), url(https://ani.cursors-4u.net/cursors/cur-13/cur1163.png), auto !important;}
+
+/* CSS variables*/
+:root {
+	--pigmentation_big_text: #FFFFFFFF;
+	--pigmentation_sall_text: #AEC0E8FF;
+	--pigmentation_signature: #78FF56FF;
+	--pigmentation_side_text: #AEC0E8FF;
+	--pigmentation_progression: #0E1E37FF;
+	--pigmentation_goal: #552739FF;
+	--pigmentation_box_background: #050E2380;
+	--pigmentation_box_body: #1D334BFF;
+	--pigmentation_link_hover: #FFDFF0FF;
+	--pigmentation_box_hover:#050E23FF;
+	--pigmentation_button: #391727FF;
+	--pigmentation_button_hover: #050E23FF;
+	--pigmentation_alert_text: #1D334BFF;
+	--pigmentation_alert_box: #D8A9B8FF;
+	--pigmentation_border: #1D212AFF;
+	--pigmentation_scrollbar_track: #C81619FF;
+	--pigmentation_scrollbar_thumb: #FFBA6BFF;
+	--pigmentation_chatbox_even: #38212AFF;
+	--pigmentation_chatbox_odd: #4F3C48FF;
+	--pigmentation_shadow_text: #E64F3540;
+	--pigmentation_opacity: 1.0;
+	--family_font_1: 'Fondamento', cursive;
+	--family_font_2: 'Marcellus', serif;
+  }
 
 /* BACKGROUND */
 
 body {
-	background: url('https://static.lioden.com/images/nightBG.jpg');
+	background: url('https://i.redd.it/ko3tpg5rtid61.jpg'); /* Image Source https://www.reddit.com/r/wallpaper/comments/l4typ9/demiurge_2560_x_1440 */
 	background-repeat: repeat;
     background-attachment: fixed;
     background-position: center; 
-	background-size: auto;
-	font-family: "OpenSans", Helvetica, Tahoma, Arial, sans-serif;
-	color: #00020F;
+	background-size: cover;
+	font-family: var(--family_font_1);
+	color: var(--pigmentation_big_text);
 }
 
 
 /* FEED ALL, PLAY ALL */
 
 .feature {
-	background: #EDBA74 !important;
-	color: #E7EAE7 !important;
+	background: var(--pigmentation_box_body) !important;
+	color: var(--pigmentation_3) !important;
 	border: none !important;
 	border-radius: 5px !important;
 }
@@ -33,30 +64,34 @@ body {
 /* TOPBAR ("Welcome back, ___"), NAVBAR (Den/Crossroads/Etc.) */
 
 .topbar {
-	background: #45595A;
+	background: var(--pigmentation_box_body);
 	border: none;
 	border-top: none;
-	color: #F2F3F3;
+	color: var(--pigmentation_sall_text);
 	border-radius: 5px;
-	font-family: "OpenSans", Helvetica, Tahoma, Arial, sans-serif;
+	font-family: var(--family_font_1);
 }
 
 .navbar {
-	background: #9FAEB5;
+	background: var(--pigmentation_box_body);
 	border-bottom: none;
-	font-family: "OpenSans", Helvetica, Tahoma, Arial, sans-serif;
-	color: #274951;
+	font-family: var(--family_font_2);
+	color: var(--pigmentation_sall_text);
 	border-radius: 5px;
 }
 
 .navbar li a {
-	color: #274951 !important;
+	color: var(--pigmentation_big_text) !important;
 }
+
+.badge {
+    background: var(--pigmentation_box_body);
+} 
 
 /* NAVBAR HOVER COLOR */
 
 .navbar li a:hover {
-	background: #00020F !important;
+	background: var(--pigmentation_box_hover) !important;
 }
 
 
@@ -64,7 +99,7 @@ body {
 
 /* RIGHT SIDE */
 .container.main {
-	background: #00020F;
+	background: var(--pigmentation_box_background);
 	border: none;
 	box-shadow: none;
 	border-radius: 5px;
@@ -79,26 +114,33 @@ body {
 /* BREADCRUMB (Home / Den) */
 
 .breadcrumb {
-	background: rgba(64, 67, 74, 0.5);
+	background: var(--pigmentation_box_body);
 }
 
 .breadcrumb .active {
 	color: #6D717C;
 }
 
+.breadcrumb::after {
+    content: "CSS by Hara Kaza [#313293]";
+    color: var(--pigmentation_signature);
+    position: absolute;
+    right: 13%;
+    z-index: 100;}
+
 
 /* ALERTS (ie. "Your lionesses have returned from hunting!") */
 
 .alert {
-	background: #1D212A;
+	background: var(--pigmentation_box_body);
 	border: none;
-	color: #6D717C;
+	color: var(--pigmentation_big_text);
 }
 
 .alert-warning,
 .alert-danger {
-	background: #1D212A;
-	color: #6D717C;
+	background: var(--pigmentation_alert_box);
+	color: var(--pigmentation_alert_text);
 }
 
 
@@ -106,87 +148,118 @@ body {
 
 .feature,
 div.left {
-	background: #1D212A;
+	background: var(--pigmentation_box_body);
 	border: none;
 }
 
 
 /* ENERGY BARS, ACHIEVEMENTS, & BOOKMARKS */
 
+.sidebar h3 {
+	color: var(--pigmentation_big_text) !important;
+	font-size: 20px;
+}
+
+/* SIDEBAR BOXES */
+
 .panel {
-	background: #2A303A !important;
+	background: var(--pigmentation_box_body) !important;
 	box-shadow: none !important;
 	border: none !important;
-	color: #000000 !important;
+	color: var(--pigmentation_side_text) !important;
 }
 
 /* ENERGY BAR BACKGROUND */
 .progress {
-	background: #1D212A;
-	color: #6D717C !important;
+	background: var(--pigmentation_goal);
+	color: var(--pigmentation_side_text) !important;
 }
 
 /* ENERGY BAR TEXT */
 .progress div {
-	color: #6D717C !important;
+	color: var(--pigmentation_sall_text) !important;
 }
 
 /* ENERGY BAR COLOR */
 .progress-bar {
-	background: #40434a;
-	color: #6D717C !important;
+	background: var(--pigmentation_progression);
+	color: var(--pigmentation_side_text) !important;
 }
 
 
 /* CHAT */
 #chatMessagePinned.s-chat-message__pinned {
    	border: 1px !important;
-	border-bottom: #101217 3px solid !important;
-	border-bottom-color: #101217 !important;
+	border-bottom: var(--pigmentation_border) 3px solid !important;
+	border-bottom-color: var(--pigmentation_border) !important;
 }
 
 .s-chat-message:nth-child(even) {
-	background: #1D212A !important;
+	background: var(--pigmentation_chatbox_even) !important;
 	border: 3px !important;
-	border-bottom: #101217 1px solid !important;
-	border-bottom-color: #101217 !important;
+	border-bottom: var(--pigmentation_border) 1px solid !important;
+	border-bottom-color: var(--pigmentation_border) !important;
 }
 
 .s-chat-message:nth-child(odd) {
-	background: #40434a !important;
+	background: var(--pigmentation_chatbox_odd) !important;
 	border: 3px !important;
-	border-bottom: #101217 1px solid !important;
-	border-bottom-color: #101217 !important;
+	border-bottom: var(--pigmentation_border) 1px solid !important;
+	border-bottom-color: var(--pigmentation_border) !important;
 }
 
 /* PINNED MESSAGE */
 .s-chat-message__pinned {
-	background: #1D212A !important;
-	color: #6D717C !important;
+	background: var(--pigmentation_chatbox_even) !important;
+	color: var(--pigmentation_sall_text) !important;
 	border: 3px !important;
-	border-bottom: #101217 1px solid !important;
-	border-bottom-color: #101217 !important;
+	border-bottom: var(--pigmentation_border) 1px solid !important;
+	border-bottom-color: var(--pigmentation_border) !important;
 }
 
 .s-chat-message_timestamp {
-	color: #6D717C !important;
+	color: var(--pigmentation_big_text) !important;
 }
 
 div#chatMessageContainer {
 	border: none !important;
 }
 
+#context-chatMenu .chatMenu-option, #fraChatSettingsMenu .chatMenu-option {
+    background: var(--pigmentation_chatbox_even);
+    border: 0;
+    color: var(--pigmentation_big_text);
+    cursor: pointer;
+    display: block;
+    font-weight: bold;
+    padding: 6px;
+    text-align: center;
+    width: 100%;
+}
+
+#context-chatMenu {
+    background: var(--pigmentation_chatbox_even);
+    border-radius: 4px;
+    border: 1px solid var(--pigmentation_big_text);
+    box-shadow: 1px 1px 2px var(--pigmentation_border);
+    cursor: default;
+    width: 140px;
+    position: absolute;
+    padding: 4px;
+    z-index: 90000;
+}
+
 /* CURRENT CHANNEL TAB (MAIN, SALES, ETC.) */
 button#label_currentChannel {
 	border: none !important;
-	background: #1D212A !important;
+	background: var(--pigmentation_button) !important;
 }
 
 
 /* BIGGEST HEADER ("___"'s DEN) */
 
 h1 {
-	color: #6D717C;
+	color: var(--pigmentation_small_text);
 	font-size: 72px;
 	text-align: center;
 }
@@ -195,7 +268,7 @@ h1 {
 /* MEDIUM HEADER */
 
 h2 {
-	color: #6D717C;
+	color: var(--pigmentation_small_text);
 	font-size: 24px;
 	text-align: center;
 }
@@ -204,7 +277,7 @@ h2 {
 /* SMALL HEADER */
 
 h3 {
-	color: #6D717C !important;
+	color: var(--pigmentation_small_text) !important;
 	font-size: 14px !important
 }
 
@@ -214,7 +287,7 @@ h3 {
 
 /* PANEL BACKGROUND COLOR */
 .table {
-	background: rgba(64, 67, 74, 0.3);
+	background: var(--pigmentation_box_body);
 	border: none !important;
 	border-collapse: separate;
 	border-radius: 5px;
@@ -225,8 +298,8 @@ h3 {
 .top,
 .bottom,
 th {
-	background: #1D212A !important;
-	color: #6D717C !important;
+	background: var(--pigmentation_box_body) !important;
+	color: var(--pigmentation_small_text) !important;
 	border-radius: 5px;
 }
 
@@ -234,35 +307,69 @@ th {
 /* Block of color where "Territory Description, Player Name, Avatar URL" etc. are */
 
 .table .left {
-	background: #1D212A
+	background: var(--pigmentation_box_body)
 }
 
 /* Affects the color behind your territory description, player name, etc. */
 
+
+
 input,
 select,
 textarea {
-	background: #6D717C !important;
+	background: var(--pigmentation_button) !important;
 	border: none !important;
-	border-color: black;
+	border-color: var(--pigmentation_border);
 	border-radius: 5px;
 	box-shadow: none !important;
-	color: black !important;
+	color: var(--pigmentation_side_text) !important;
 	text-shadow: none !important;
 }
+
+.select-control,
+button.button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+	background: var(--pigmentation_button) !important;
+	color: var(--pigmentation_sall_text) !important;
+	border: 1px solid var(--pigmentation_border);
+	text-shadow: 1px 1px 0px var(--pigmentation_shadow_text);
+	font-size: 13px;
+	padding: 3px 12px;
+	margin: 2px 0;
+	border-radius: 3px;
+}
+
+.select-control:hover,
+button.button:hover,
+input[type="button"]:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+	background: var(--pigmentation_button_hover) !important;
+	color: var(--pigmentation_big_text) !important;
+	border: 1px solid var(--pigmentation_border);
+	text-shadow: 1px 1px 0px var(--pigmentation_shadow_text);
+	font-weight: bold;
+	font-size: 13px;
+	padding: 3px 12px;
+	margin: 2px 0;
+	border-radius: 3px;
+}
+
 
 
 /* Color behind "Level, Stats, Branch, Territory" etc. */
 
 .inner-table .left {
-	background: rgba(64, 67, 74, 0.4) !important;
+	background: var(--pigmentation_box_body) !important;
 }
 
 
 /* Color behind the number of all of the things above */
 
 .inner-table .right {
-	background: rgba(64, 67, 74, 0.2)
+	background: var(--pigmentation_box_body)
 }
 
 /* IGNORE */
@@ -274,12 +381,12 @@ textarea {
 /* ACCOUNT OPTIONS PANELS  (Friend Requests Toggles, etc.) */
 
 .item-header {
-	background: #1D212A !important;
-	color: #6D717C  !important;
+	background: var(--pigmentation_box_body) !important;
+	color: var(--pigmentation_small_text)  !important;
 }
 
 .item {
-	background: rgba(0, 0, 0, 0.6) !important;
+	background: var(--pigmentation_box_body) !important;
 	border: none !important;
 }
 
@@ -287,11 +394,11 @@ textarea {
 /* BEETLE MOUND TOPBAR (Where it says Beetle Training Grounds, Beetle Battling, etc.) */
 
 .sub_menu {
-	background: #1D212A !important;
+	background: var(--pigmentation_box_body) !important;
 }
 
 .sub_menu_item_selected {
-	background: #1D212A !important;
+	background: var(--pigmentation_box_body) !important;
 }
 
 
@@ -299,7 +406,7 @@ textarea {
 
 .cave-grid,
 .mound-grid {
-	background: #1D212A;
+	background: var(--pigmentation_box_body);
 	border: none !important;
 }
 
@@ -308,15 +415,19 @@ textarea {
 
 a:link,
 a:visited {
-	color: #6D717C !important;
+	color: var(--pigmentation_small_text) !important;
 	transition: 0.5s !important;
-	text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+	text-shadow: 0px 0px 8px var(--pigmentation_shadow_text);
 }
 
 a:hover {
-	color: #000000 !important;
+	color: var(--pigmentation_link_hover) !important;
 }
 
+
+.text-muted {
+    color: var(--pigmentation_sall_text);
+}
 
 /* BOXES (Copy paste to add more or less) */
 
@@ -329,37 +440,40 @@ a:hover {
 }
 
 .Box1 {
-	float: left;
-	background: rgba(0, 0, 0, 0.6);
-	color: #6D717C ;
+	float: none;
+	background: var(--pigmentation_box_body);
+	color: var(--pigmentation_small_text);
 	padding: 15px;
 	border: none;
 	border-radius: 5px;
 	margin: 5px;
-	height: 300px;
-	width: 350px;
-	overflow: auto;
+	height: 100%;
+	width: 90%;
+	overflow: hidden;
 	margin-bottom: 25px;
+	opacity: 0.5;
 	transition: 1s /* HOW FAST HOVER BOX EXPANDS TO FULL SIZE */7
 }
 
-/* HOVER BOX (SIZE WHEN HOVERING OVER) */
+/* HOVER BOX (SIZE WHEN HOVERING OVER)
 .Box1:hover {
 	overflow-y: auto;
 }
+*/
 
 .Box2 {
-	float: left;
-	background: rgba(0, 0, 0, 0.6);
-	color: #6D717C ;
+	float: none;
+	background: var(--pigmentation_box_body);
+	color: var(--pigmentation_small_text);
 	padding: 15px;
 	border: none;
 	border-radius: 5px;
 	margin: 5px;
-	height: 300px;
-	width: 350px;
+	height: 100%;
+	width: 90%;
 	overflow: hidden;
 	margin-bottom: 25px;
+	opacity: 0.5;
 	transition: 1s /* HOW FAST HOVER BOX EXPANDS TO FULL SIZE */
 }
 
@@ -380,14 +494,14 @@ a:hover {
 /* SCROLL BAR BACKGROUND */
 
 ::-webkit-scrollbar-track {
-	background: #000000;
+	background: var(--pigmentation_scrollbar_track);
 }
 
 
 /* SCROLL BAR "THUMB" */
 
 ::-webkit-scrollbar-thumb {
-	background: #000000;
+	background: var(--pigmentation_scrollbar_thumb);
 	border-radius: 4px;
 }
 
@@ -395,11 +509,11 @@ a:hover {
 /* LION AND USER AVATAR OPACITY */
 
 div#lion_image {
-	opacity: 0.6;
+	opacity: var(--pigmentation_opacity);
 }
 
 table#player img {
-	opacity: 0.6;
+	opacity: var(--pigmentation_opacity);
 }
 
 
@@ -421,7 +535,7 @@ table#player img {
 /* LIODEN LOGO REPLACER */
 
 div.container.main>div:nth-child(1)>nav>div.navbar-header>a>img {
-	content: url('https://static.lioden.com/img/layout/logo-full-2.png');
+	content: url('https://harakaza.github.io/Lioden_CSS/Hara_Main_Den/logo-full-Custom2.gif');
 }
 
 
@@ -454,7 +568,7 @@ a[href$="lionoverview.php?id=USERID"]>div.cave-grid>img {
 }
 
 
-/* MOUNDS 
+ MOUNDS
 
 .mound-grid img {
 	background: url('https://static.lioden.com/images/dynamic/backgrounds/PerseidStormBG.png');
@@ -467,7 +581,7 @@ a[href$="lionoverview.php?id=USERID"]>div.cave-grid>img {
 	background: #1f4529;
 	color: white;
 	padding: 5px;
-	border: 1px solid black;
+	border: 1px solid var(--pigmentation_border);
 	position: fixed;
 	text-align: center;
 	border-radius: 10px;
@@ -485,91 +599,3 @@ a[href$="lionoverview.php?id=USERID"]>div.cave-grid>img {
     display: inline-block;
 }
 */
-
-
-
-
-
-
-
-.dissolveAbout {
-    background-image:url('https://cdn.discordapp.com/attachments/696533439444156556/696592064602963998/iOS-7-dark-mod-iphone-wallpaper-ar72014.jpg');
-    width:797.5px;
-    height:150px;
-    overflow:hidden;
-    transition:0.5s ease-in-out;
-    background-color:#6D717C;
-    border:5px solid #16181c;
-	border-style: solid;
-	border-radius: 10px;
-}
-
-.dissolveAboutTop {
-    width:797.5px;
-    position:absolute;
-    z-index:99;
-    font-family: 'Lora', serif;
-    font-size:45px;
-    line-height:140px;
-    margin:auto;
-    margin-left:-10px;
-    text-transform:uppercase;
-    transition:0.5s ease-in-out;
-    color:#6D717C;
-}
-
-.dissolveAboutBottom {
-    margin:0;
-    position:relative;
-    width:775.5px;
-    height:145px;
-    margin-top:500px;
-    z-index:100;
-    transition:0.5s ease-in-out;
-    padding:5px;
-    background-color:rgba(109, 113, 124, 0.5);
-    text-align:justify;
-    color:#000000;
-    overflow-y: auto;
-}
-
-.dissolveAbout:hover .dissolveAboutTop {
-    font-size:0px;
-    transition:0.9s ease-in-out;
-}
-
-.dissolveAbout:hover .dissolveAboutBottom {
-    margin-top:0px;
-    top:0;
-    transition:0.9s ease-in-out;
-}
-.credit {
-	background: #1D212A;
-	color: #6D717C;
-	padding: 5px;
-	border: 1px solid black;
-	position: fixed;
-	text-align: center;
-	border-radius: 10px;
-	left: 0px;
-	bottom: 0px;
-	width: 185px;
-	height: 50px;
-	overflow: auto;
-}
-.Box1 {
-	float: left;
-	background: #2A303A;
-	color: #6D717C;
-	padding: 15px;
-	border: none;
-	border-radius: 5px;
-	margin: 5px;
-	margin-bottom: 0px;
-	height: 150px;
-	width: 250px;
-	overflow: hidden;
-}
-.Box1:hover {
-	overflow-y: auto;
-}

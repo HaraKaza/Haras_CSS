@@ -448,7 +448,7 @@ a:hover {
 .Box1 {
 	float: none;
 	background: var(--pigmentation_box_body);
-	color: var(--pigmentation_small_text) ;
+	color: var(--pigmentation_small_text);
 	padding: 15px;
 	border: none;
 	border-radius: 5px;
@@ -469,8 +469,8 @@ a:hover {
 
 .Box2 {
 	float: none;
-	background: rgba(0, 0, 0, 0.6);
-	color: #6D717C ;
+	background: var(--pigmentation_box_body);
+	color: var(--pigmentation_small_text);
 	padding: 15px;
 	border: none;
 	border-radius: 5px;

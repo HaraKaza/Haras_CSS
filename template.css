@@ -31,6 +31,8 @@
 	--pigmentation_border: #1D212AFF;
 	--pigmentation_scrollbar_track: #BBFF00FF;
 	--pigmentation_scrollbar_thumb: #00FFDDFF;
+	--pigmentation_chatbox_even: #00FF00FF;
+	--pigmentation_chatbox_odd: #A6FFF0FF;
     --pigmentation_1: #FF0000FF;
 	--pigmentation_2: #00FF00FF;
     --pigmentation_3: #0000FFFF;
@@ -199,14 +201,14 @@ div.left {
 }
 
 .s-chat-message:nth-child(even) {
-	background: var(--pigmentation_9) !important;
+	background: var(--pigmentation_chatbox_even) !important;
 	border: 3px !important;
 	border-bottom: var(--pigmentation_border) 1px solid !important;
 	border-bottom-color: var(--pigmentation_border) !important;
 }
 
 .s-chat-message:nth-child(odd) {
-	background: var(--pigmentation_4) !important;
+	background: var(--pigmentation_chatbox_odd) !important;
 	border: 3px !important;
 	border-bottom: var(--pigmentation_border) 1px solid !important;
 	border-bottom-color: var(--pigmentation_border) !important;
@@ -214,7 +216,7 @@ div.left {
 
 /* PINNED MESSAGE */
 .s-chat-message__pinned {
-	background: var(--pigmentation_5) !important;
+	background: var(--pigmentation_chatbox_even) !important;
 	color: var(--pigmentation_6) !important;
 	border: 3px !important;
 	border-bottom: var(--pigmentation_border) 1px solid !important;
@@ -222,11 +224,35 @@ div.left {
 }
 
 .s-chat-message_timestamp {
-	color: var(--pigmentation_7) !important;
+	color: var(--pigmentation_big_text) !important;
 }
 
 div#chatMessageContainer {
 	border: none !important;
+}
+
+#context-chatMenu .chatMenu-option, #fraChatSettingsMenu .chatMenu-option {
+    background: var(--pigmentation_chatbox_even);
+    border: 0;
+    color: var(--pigmentation_big_text);
+    cursor: pointer;
+    display: block;
+    font-weight: bold;
+    padding: 6px;
+    text-align: center;
+    width: 100%;
+}
+
+#context-chatMenu {
+    background: var(--pigmentation_chatbox_even);
+    border-radius: 4px;
+    border: 1px solid var(--pigmentation_big_text);
+    box-shadow: 1px 1px 2px var(--pigmentation_border);
+    cursor: default;
+    width: 140px;
+    position: absolute;
+    padding: 4px;
+    z-index: 90000;
 }
 
 /* CURRENT CHANNEL TAB (MAIN, SALES, ETC.) */
@@ -302,7 +328,7 @@ textarea {
 	border-color: var(--pigmentation_border);
 	border-radius: 5px;
 	box-shadow: none !important;
-	color: black !important;
+	color: var(--pigmentation_side_text) !important;
 	text-shadow: none !important;
 }
 
@@ -397,7 +423,7 @@ a:link,
 a:visited {
 	color: var(--pigmentation_small_text) !important;
 	transition: 0.5s !important;
-	text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+	text-shadow: 0px 0px 8px var(--pigmentation_border);
 }
 
 a:hover {
@@ -420,37 +446,40 @@ a:hover {
 }
 
 .Box1 {
-	float: left;
-	background: rgba(0, 0, 0, 0.6);
+	float: none;
+	background: var(--pigmentation_box_body);
 	color: var(--pigmentation_small_text) ;
 	padding: 15px;
 	border: none;
 	border-radius: 5px;
 	margin: 5px;
-	height: 300px;
-	width: 350px;
-	overflow: auto;
+	height: 100%;
+	width: 90%;
+	overflow: hidden;
 	margin-bottom: 25px;
+	opacity: 0.5;
 	transition: 1s /* HOW FAST HOVER BOX EXPANDS TO FULL SIZE */7
 }
 
-/* HOVER BOX (SIZE WHEN HOVERING OVER) */
+/* HOVER BOX (SIZE WHEN HOVERING OVER)
 .Box1:hover {
 	overflow-y: auto;
 }
+*/
 
 .Box2 {
-	float: left;
+	float: none;
 	background: rgba(0, 0, 0, 0.6);
 	color: #6D717C ;
 	padding: 15px;
 	border: none;
 	border-radius: 5px;
 	margin: 5px;
-	height: 300px;
-	width: 350px;
+	height: 100%;
+	width: 90%;
 	overflow: hidden;
 	margin-bottom: 25px;
+	opacity: 0.5;
 	transition: 1s /* HOW FAST HOVER BOX EXPANDS TO FULL SIZE */
 }
 
